@@ -1,4 +1,4 @@
-import { MovieCardProp } from '@/app/@types';
+import { MovieCardProp } from '@/@types';
 import Image from 'next/image';
 import Link from 'next/link'
 import React from 'react'
@@ -13,7 +13,7 @@ const MovieCard: React.FC<MovieCardProp>  = (movie) => {
               {movie.title}
               <Image src={IMAGE_BASE_URL + movie.poster_path}  width={220} height={330} alt='poster'/>
             </div>
-            <p className='bg-white-100 text-gray-400 font-bold text-base flex justify-between px-2'>
+            <p className='bg-white-100 text-gray-400 font-bold text-base flex justify-between px-2ß'>
               <span>{movie.date}</span>
               <span>{movie.rate}</span>
 
