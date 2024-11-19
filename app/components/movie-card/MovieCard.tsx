@@ -8,7 +8,7 @@ const MovieCard: React.FC<MovieCardProp>  = (movie) => {
   const IMAGE_BASE_URL = 	"https://media.themoviedb.org/t/p/w220_and_h330_face"
   return (
     <div className='text-white-100'>
-        <Link href={'/movies/'} className='text-white-100'>
+        <Link href={`/movies/${movie.id}`} className='text-white-100'>
             <div className='text-white-100 '>
               {movie.title}
               <Image src={IMAGE_BASE_URL + movie.poster_path}  width={220} height={330} alt='poster'/>

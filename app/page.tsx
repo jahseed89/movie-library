@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { getTrendingMovies } from "@/utiles/requests";
 import MovieCard from "./components/movie-card/MovieCard";
-import { Key } from "react";
 
 export default async function Home() {
   const movies = await getTrendingMovies();
 
   return (
     <div className="bg-dark-200 p-3 lg-p-10">
-      <div className="flex justify-between items-center px-0 lg:px-20">
+      <div className="flex justify-between items-center px-0 lg:px-20 pt-3 lg:pt-8">
         <span>
           <Image src="/movie-logo.png" width={50} height={50} alt="logo" />
         </span>
@@ -33,14 +32,17 @@ export default async function Home() {
               vote_average: number;
               release_date: number;
               poster_path: string;
-              id: Key;
+              id: number;
               title: string;
             }) => (
               <MovieCard
                 key={movie.id}
                 title={movie.title}
                 poster_path={movie.poster_path}
-                date={movie.release_date} rate={movie.vote_average}              />
+                date={movie.release_date}
+                rate={movie.vote_average}
+                id={movie.id}
+              />
             )
           )}
         </div>
