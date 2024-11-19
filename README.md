@@ -14,3 +14,6 @@ yarn dev
 ####### Users can access a dashboard showcasing all trending movies, with each movie card providing a navigable link to detailed information about the selected movie.
 
 #####   Applicatoon is run with the: npm run dev command.
+
+
+##### NOTE: Currently, the MovieDetails page is not functioning as expected, but I am actively working on resolving the issue. I had to submit the project before the deadline. Additionally, I am implementing further improvements to enhance the application's overall quality.
