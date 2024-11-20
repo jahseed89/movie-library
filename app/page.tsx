@@ -29,10 +29,10 @@ export default async function Home() {
         <div className="flex flex-wrap justify-between gap-4">
           {movies.map(
             (movie: {
-              vote_average: number;
-              release_date: number;
+              vote_average: string;
+              release_date: string;
               poster_path: string;
-              id: number;
+              id: string;
               title: string;
             }) => (
               <MovieCard
@@ -50,3 +50,4 @@ export default async function Home() {
     </div>
   );
 }
+

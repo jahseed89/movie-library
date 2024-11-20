@@ -1,7 +1,7 @@
 export interface MovieCardProp {
-    id: number;
-    rate: number;
-    date: number;
+    id: string;
+    rate: string;
+    date: string;
     poster_path: string;
     title: string;
 }
