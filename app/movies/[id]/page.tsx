@@ -21,14 +21,13 @@ const MovieDetailsPage = async ({ params }: MovieDetailsPageProps) => {
 
     const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w220_and_h330_face";
 
-    if (!movieDetails || !movieDetails.backdrop_path) {
+    if (!movieDetails || Object.keys(movieDetails).length === 0) {
       return (
         <div className="text-center text-white">
           <p>Movie details not found or image unavailable.</p>
         </div>
       );
     }
-
     return (
       <div className="text-white p-5">
         <Image
